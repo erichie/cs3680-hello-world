@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ER_Hello_World" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,68 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Destiny" translatesAutoresizingMaskIntoConstraints="NO" id="8xQ-uT-L7e">
+                                <rect key="frame" x="48" y="56" width="280" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="7Cj-XK-WFC"/>
+                                    <constraint firstAttribute="width" constant="280" id="mqx-u7-f4e"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destiny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Iz-8V-eGj">
+                                <rect key="frame" x="137" y="310" width="101" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created and Developed by Bungie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bI6-BS-p3Z">
+                                <rect key="frame" x="58" y="356" width="261" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="O8E-uS-a4H">
+                                <rect key="frame" x="68" y="447" width="240" height="186"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">From the Creators of Halo and the company that brought you Call of Duty. In Destiny you are a Guardian of the last city on Earth, able to wield incredible power. Explore the ancient ruins of our solar system, from the red dunes of Mars to the lush jungles of Venus. Defeat Earth’s enemies. Reclaim all that we have lost. Become legend.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ph-Q6-bdo">
+                                <rect key="frame" x="127" y="398" width="121" height="30"/>
+                                <state key="normal" title="Show Description"/>
+                                <connections>
+                                    <action selector="showGameDescriptionWith_sender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cot-O1-1vb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="O8E-uS-a4H" firstAttribute="top" secondItem="4Ph-Q6-bdo" secondAttribute="bottom" constant="19" id="9w5-a4-ObA"/>
+                            <constraint firstItem="4Iz-8V-eGj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CW3-9I-oBR"/>
+                            <constraint firstItem="4Iz-8V-eGj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-6" id="MWW-dI-3x2"/>
+                            <constraint firstItem="bI6-BS-p3Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="PHO-ph-W49"/>
+                            <constraint firstItem="O8E-uS-a4H" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="206.5" id="QH5-Vv-n2F"/>
+                            <constraint firstItem="bI6-BS-p3Z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="33" id="QeO-qm-14C"/>
+                            <constraint firstItem="O8E-uS-a4H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xlc-hb-itz"/>
+                            <constraint firstItem="4Ph-Q6-bdo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="axD-KI-pdB"/>
+                            <constraint firstItem="8xQ-uT-L7e" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-177.5" id="cjI-KD-t1D"/>
+                            <constraint firstItem="8xQ-uT-L7e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eDt-kI-kD1"/>
+                            <constraint firstItem="O8E-uS-a4H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="52" id="mfh-ih-P4S"/>
+                            <constraint firstItem="4Ph-Q6-bdo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="79.5" id="npR-ww-gkK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameDescription" destination="O8E-uS-a4H" id="MY4-Bs-4pb"/>
+                        <outlet property="showGameDescriptionButton" destination="4Ph-Q6-bdo" id="NPp-hh-DmT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Destiny" width="1280" height="719"/>
+    </resources>
 </document>
